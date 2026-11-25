@@ -5,7 +5,7 @@ Our three-person team's project for [Terminal X26](https://events.cantutor.ai/),
 ## Team
 
 - Mathias De Melo
-- Lincon Fiser
+- Lincoln Fiser
 - Kyler Quesnel
 
 ## Challenge

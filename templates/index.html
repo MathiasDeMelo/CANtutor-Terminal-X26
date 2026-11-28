@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pathway Planner – AI Guidance Counsellor</title>
+  <!-- "../static/..." works both when Flask serves the page AND when you open the file directly -->
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+  <header class="top">
+    <h1>🎓 Pathway Planner</h1>
+    <p class="subtitle">Your AI guidance counsellor for Grades 10–12</p>
+    <span class="badge">Sample catalog, not official</span>
+  </header>
+
+  <!-- Status bar: shows "Loading..." or a friendly error. Hidden when empty. -->
+  <div id="status" class="status hidden"></div>
+
+  <main class="layout">
+
+    <!-- LEFT: the form the student fills in -->
+    <section class="panel">
+      <h2>About you</h2>
+      <form id="plan-form">
+
+        <label for="grade">Current grade</label>
+        <select id="grade">
+          <option value="10">Grade 10</option>
+          <option value="11" selected>Grade 11</option>
+          <option value="12">Grade 12</option>
+        </select>
+
+        <fieldset>
+          <legend>Courses you've completed</legend>
+          <label class="check"><input type="checkbox" name="completed" value="ICS2O" checked> ICS2O – Intro to Computer Studies</label>
+          <label class="check"><input type="checkbox" name="completed" value="MPM2D"> MPM2D – Principles of Math</label>
+          <label class="check"><input type="checkbox" name="completed" value="ICS3U"> ICS3U – Computer Science (Gr 11)</label>
+          <label class="check"><input type="checkbox" name="completed" value="MCR3U"> MCR3U – Functions (Gr 11)</label>
+        </fieldset>
+
+        <label for="interests">Interests <span class="hint">(it's OK to be undecided)</span></label>
+        <input type="text" id="interests" placeholder="e.g. computer science, games, not sure yet" value="computer science">
+
+        <label for="pathway">Pathway</label>
+        <select id="pathway">
+          <option value="computing">Computing</option>
+        </select>
+
+        <button type="submit" id="plan-btn">Get my plan</button>
+      </form>
+    </section>
+
+    <!-- RIGHT: results (filled in by app.js) -->
+    <section class="results">
+      <div id="explanation" class="panel explanation">
+        Fill in the form and press <b>Get my plan</b> to see your roadmap.
+      </div>
+
+      <div id="warnings"></div>
+
+      <div class="roadmap">
+        <div class="grade-col"><h3>Grade 10</h3><div id="col-10" class="cards"></div></div>
+        <div class="grade-col"><h3>Grade 11</h3><div id="col-11" class="cards"></div></div>
+        <div class="grade-col"><h3>Grade 12</h3><div id="col-12" class="cards"></div></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="../static/app.js"></script>
+</body>
+</html>

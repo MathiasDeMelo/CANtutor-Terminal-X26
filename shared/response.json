@@ -1,0 +1,30 @@
+{
+  "roadmap": [
+    {
+      "grade": 10,
+      "code": "DEMO10",
+      "name": "Computing Foundations",
+      "status": "eligible",
+      "requires": []
+    },
+    {
+      "grade": 11,
+      "code": "DEMO11",
+      "name": "Programming",
+      "status": "conditional",
+      "requires": [
+        "DEMO10"
+      ]
+    },
+    {
+      "grade": 12,
+      "code": "DEMO12",
+      "name": "Advanced Computing",
+      "status": "conditional",
+      "requires": [
+        "DEMO11"
+      ]
+    }
+  ],
+  "impact": []
+}

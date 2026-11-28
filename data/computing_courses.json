@@ -1,0 +1,20 @@
+{
+  "ICD2O": {
+    "grade": 10,
+    "name": "Digital Technology and Innovations in the Changing World",
+    "requires": [],
+    "source": "https://drgwwilliams-ss.yrdsb.ca/computer-science"
+  },
+  "ICS3U": {
+    "grade": 11,
+    "name": "Introduction to Computer Science",
+    "requires": [],
+    "source": "https://www.edu.gov.on.ca/eng/curriculum/secondary/computer10to12_2008.pdf#page=9"
+  },
+  "ICS4U": {
+    "grade": 12,
+    "name": "Computer Science",
+    "requires": ["ICS3U"],
+    "source": "https://www.edu.gov.on.ca/eng/curriculum/secondary/computer10to12_2008.pdf#page=9"
+  }
+}
